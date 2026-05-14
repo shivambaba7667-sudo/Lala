@@ -377,7 +377,7 @@ def show_status(message):
 
 # --- [ HELPER: GENERATE RANDOM KEY ] ---
 def generate_key(length=10):
-    return "DRX-" + ''.join(random.choices(string.ascii_uppercase + string.digits, k=length))
+    return "ROYAL-" + ''.join(random.choices(string.ascii_uppercase + string.digits, k=length))
 
 @bot.message_handler(commands=['genkey'])
 def handle_genkey_advance(message):
@@ -430,7 +430,7 @@ def handle_genkey_advance(message):
     generated_keys = []
     for _ in range(amount):
         # Unique Key Generation
-        key = "DRX-" + ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
+        key = "ROYAL-" + ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
         db.setdefault('keys', []).append({
             "key": key, 
             "duration_hours": hours, 
